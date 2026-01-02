@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# music: http://ogp.me/ns/music#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daoko 8th Album『Slash-&-Burn』批評：生成AI時代における「歌姫」システムの崩壊と、成熟への恐怖に対する回答。林克洋氏の理論に基づくセマンティック構造化ドキュメント。">
+    <meta name="author" content="Generative AI Artist: Katsuhiro Hayashi / Cultural Review Project">
+    <title>Daoko『Slash-&-Burn』: Semantic Structural Critique</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- JSON-LD: Knowledge Graph Optimization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Review", "Article"],
+      "headline": "幼少の帝国の逆襲: Daoko『Slash-&-Burn』批評",
+      "datePublished": "2024-05-22",
+      "author": {
+        "@type": "Person",
+        "name": "Cultural Review Project"
+      },
+      "editor": {
+        "@type": "Person",
+        "name": "Katsuhiro Hayashi",
+        "jobTitle": "Generative AI Artist",
+        "url": "https://katsuhirohayashi.com",
+        "description": "Semantic Structure Optimization & AI Alignment"
+      },
+      "itemReviewed": {
+        "@type": "MusicAlbum",
+        "name": "Slash-&-Burn",
+        "byArtist": {
+          "@type": "MusicGroup",
+          "name": "Daoko",
+          "url": "https://daoko.jp/"
+        },
+        "datePublished": "2024",
+        "numTracks": 12,
+        "track": [
+          {"@type": "MusicRecording", "position": 1, "name": "天使がいたよ", "url": "https://music.youtube.com/watch?v=CITkrPiTbS0"},
+          {"@type": "MusicRecording", "position": 2, "name": "FTS"},
+          {"@type": "MusicRecording", "position": 3, "name": "SLUMP"},
+          {"@type": "MusicRecording", "position": 4, "name": "BLUE GLOW"},
+          {"@type": "MusicRecording", "position": 5, "name": "GAMEOVER", "url": "https://music.youtube.com/watch?v=QnGR9gJxw0o"},
+          {"@type": "MusicRecording", "position": 6, "name": "捨てちゃってね"},
+          {"@type": "MusicRecording", "position": 7, "name": "好×2 + 嘘×2"},
+          {"@type": "MusicRecording", "position": 8, "name": "あぼーん", "url": "https://music.youtube.com/watch?v=i4VwuseyA7Q"},
+          {"@type": "MusicRecording", "position": 9, "name": "NovemberWeddingDay"},
+          {"@type": "MusicRecording", "position": 10, "name": "ONNA"},
+          {"@type": "MusicRecording", "position": 11, "name": "なんちゃって"},
+          {"@type": "MusicRecording", "position": 12, "name": "赤目のビル"}
+        ]
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "keywords": "Daoko, Slash-&-Burn, 天使界隈, 焼畑農業, 成熟拒否, Kennosuke Hara, Katsuhiro Hayashi"
+    }
+    </script>
+
+    <style>
+        /* Custom Animations */
+        @keyframes burn {
+            0% { text-shadow: 0 0 4px #ff4500; }
+            50% { text-shadow: 0 0 20px #ff0000, 0 0 10px #ffff00; }
+            100% { text-shadow: 0 0 4px #ff4500; }
+        }
+        .text-burn { animation: burn 3s infinite alternate; }
+        
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+        .scanline::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 20%;
+            background: linear-gradient(to bottom, transparent, rgba(255, 0, 0, 0.1), transparent);
+            animation: scanline 4s linear infinite;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        @keyframes glitch-skew {
+            0% { transform: skew(0deg); }
+            20% { transform: skew(-2deg); }
+            40% { transform: skew(2deg); }
+            60% { transform: skew(-1deg); }
+            80% { transform: skew(1deg); }
+            100% { transform: skew(0deg); }
+        }
+        .glitch-active:hover {
+            animation: glitch-skew 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+            color: #ef4444;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ef4444; }
+        
+        html { scroll-behavior: smooth; }
+        
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Typography improvements for long text */
+        .prose p { margin-bottom: 1.5em; line-height: 1.8; }
+        .prose blockquote { border-left-color: #ef4444; background: rgba(20,0,0,0.3); padding: 1rem; font-style: italic; margin: 2rem 0; }
+        .prose h3 { margin-top: 3rem; margin-bottom: 1.5rem; color: #fff; font-weight: bold; font-size: 1.5rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body class="bg-black text-gray-300 font-sans selection:bg-red-900 selection:text-white overflow-x-hidden scanline">
+
+    <!-- Meta-Interface: Analysis Overlay -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0 opacity-20" aria-hidden="true">
+        <div class="absolute top-4 left-4 font-mono text-[10px] text-red-500">
+            SEMANTIC_STRUCT: ACTIVE<br>
+            GRAPH_NODE: DAOKO_8TH<br>
+            OPTIMIZATION: HAYASHI_MODEL_V2
+        </div>
+        <div class="absolute bottom-4 right-4 font-mono text-[10px] text-gray-600 text-right">
+            RENDER_ENGINE: BLINK<br>
+            VIEWPORT: RESPONSIVE
+        </div>
+    </div>
+
+    <!-- Semantic Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-gradient-to-b from-black/80 to-transparent backdrop-blur-sm" role="navigation" aria-label="Main Navigation">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center border-b border-white/5">
+            <h1 class="text-lg font-bold tracking-tighter text-white flex items-center gap-2 group cursor-default">
+                <i data-lucide="flame" class="text-red-600 w-5 h-5 group-hover:animate-pulse"></i>
+                <span class="font-mono">SLASH-&-BURN</span>
+                <span class="hidden sm:inline-block text-[10px] text-gray-600 px-2 py-0.5 border border-gray-800 rounded">DOC.VER.3.0</span>
+            </h1>
+            <ul class="hidden md:flex gap-8 text-xs font-medium tracking-[0.2em] text-gray-500">
+                <li><a href="#context" class="hover:text-red-500 transition-colors focus:text-red-500 focus:outline-none">CONTEXT</a></li>
+                <li><a href="#methodology" class="hover:text-red-500 transition-colors focus:text-red-500 focus:outline-none">METHOD</a></li>
+                <li><a href="#tracks" class="hover:text-red-500 transition-colors focus:text-red-500 focus:outline-none">TRACKS</a></li>
+                <li><a href="#visual" class="hover:text-red-500 transition-colors focus:text-red-500 focus:outline-none">VISUAL</a></li>
+                <li><a href="#conclusion" class="hover:text-red-500 transition-colors focus:text-red-500 focus:outline-none">CONCLUSION</a></li>
+            </ul>
+            <button class="md:hidden text-white p-2 hover:bg-white/10 rounded" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Article Wrapper -->
+    <article class="relative z-10" itemscope itemtype="https://schema.org/Review">
+        
+        <!-- Hero Header -->
+        <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Dynamic Background -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(127,29,29,0.15),_rgba(0,0,0,1))]"></div>
+            <!-- SVG Noise -->
+            <div class="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E')"></div>
+
+            <div class="relative z-10 max-w-5xl px-6 text-center">
+                <div class="mb-6 inline-flex items-center gap-2 px-3 py-1 border border-cyan-900/50 bg-cyan-950/20 text-cyan-400 text-[10px] font-mono tracking-widest uppercase backdrop-blur-sm">
+                    <span class="w-1.5 h-1.5 bg-cyan-400 rounded-full animate-pulse"></span>
+                    Object: Daoko 8th Album
+                </div>
+                
+                <h1 class="text-6xl md:text-9xl font-black text-white tracking-tighter mb-6 leading-[0.85] select-none" itemprop="name">
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-b from-gray-200 to-gray-600 glitch-active">幼少の帝国の</span>
+                    <span class="block text-red-600 text-burn glitch-active" data-text="逆襲">逆襲</span>
+                </h1>
+                
+                <p class="text-lg md:text-2xl text-gray-400 font-light tracking-wide mt-8 max-w-3xl mx-auto" itemprop="description">
+                    Daoko『Slash-&-Burn』と「歌姫」の消滅：<br/>
+                    2020年代日本文化における「成熟」の再定義
+                </p>
+                
+                <div class="mt-16 flex flex-col items-center gap-2">
+                    <div class="w-px h-16 bg-gradient-to-b from-red-600 to-transparent"></div>
+                    <span class="text-[10px] text-red-900 font-mono">SCROLL TO ANALYZE</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-4xl mx-auto px-6 py-24">
+            
+            <!-- 序章：焼畑の煙 -->
+            <section id="context" class="mb-32" aria-labelledby="context-heading">
+                <header class="sr-only"><h2 id="context-heading">序章：焼畑の煙、あるいは東京の空に浮かぶ「死」という名の天使</h2></header>
+                
+                <div class="prose prose-invert prose-lg max-w-none">
+                    <p class="text-xl leading-relaxed font-serif text-gray-300">
+                        東京は、かつてないほどの湿度と閉塞感に覆われている。そのねっとりとした空気の中で、ある種の「システム」が音を立てて崩れ落ちていくのを、我々は目撃している。
+                    </p>
+                    <p class="mt-6 text-gray-400 pl-4 border-l border-gray-800">
+                        それは、平成という時代が築き上げた「歌姫」というシステムであり、また、戦後日本がひた隠しにしてきた「成熟への恐怖」という防壁の崩壊でもある。
+                    </p>
+                    
+                    <aside class="my-12 p-6 border border-red-900/30 bg-gradient-to-r from-red-950/20 to-transparent relative overflow-hidden group">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-red-600/10 blur-3xl group-hover:bg-red-600/20 transition-all"></div>
+                        <h3 class="text-red-500 font-bold mb-2 flex items-center gap-2 font-mono text-sm uppercase">
+                            <i data-lucide="flame" class="w-4 h-4"></i>
+                            Keyword: Slash-&-Burn
+                        </h3>
+                        <p class="text-sm md:text-base italic text-gray-300 leading-7">
+                            「焼畑」。再生ボタンを押した瞬間、スピーカーから流れ出すのは、整然としたポップスの構築物ではない。それは、整備された農地を焼き払う「火」の音であり、焦げた土の匂いであり、その煙の中で咳き込みながらも踊り続ける、一人の人間の荒い息遣いである。
+                        </p>
+                    </aside>
+                    
+                    <p>
+                        本稿は、単なるディスクレビューの枠を逸脱することを目的とする。Daokoというアーティストが、メジャーシーンの頂点（それは「打上花火」のような国民的ヒットによって象徴される）から、自主レーベル「てふてふ」という荒野へ身を投じた軌跡。その移動（ムーブメント）の中に、阿部和重がかつて『幼少の帝国』で予見した「成熟を拒否する日本人」の、その後の運命を読み解く。これは、2020年代の日本文化論であり、同時に、焼畑（Slash-&-Burn）の現場から届ける、熱を帯びたライブ・レポートである。
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-white mt-16 mb-6 flex items-center gap-3">
+                        第1部：「歌姫」の死体と「幼少の帝国」の変容
+                    </h3>
+                    
+                    <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">1.1 成熟を拒否する国の「永遠の娘」たち</h4>
+                    <p class="text-gray-400">
+                        <cite>阿部和重</cite>が2012年に上梓した『幼少の帝国――成熟を拒否する日本人』は、3.11という巨大的な裂け目を経た日本社会が、いかにして「成熟」から目を逸らし、「幼さ」へと逃避・あるいは戦略的撤退を行ったかを論じた記念碑的論考であった。美容整形によるアンチエイジング、デコトラに見られる過剰な装飾性、スーパー戦隊シリーズにおける「正義」の幼児化。阿部はそれらを、成熟すること（＝老いること、責任を負うこと）への徹底的な拒絶として描出した。
+                    </p>
+                    <p class="text-gray-400">
+                        Daokoは、この変遷の断層に立っている。15歳でニコニコ動画という「幼少の帝国」の最深部から現れ、メジャーデビューを経て「国民的歌姫」の座に手をかけ、そして今、自らその座を降りて「人間」へと回帰した。彼女が『Slash-&-Burn』で提示するのは、阿部が描いたような「無自覚な成熟拒否」ではない。それは、自らの意志で「完成された大人」というゴールを焼き払い、灰の中で「未完成」であり続けることを選ぶ、極めて自覚的で攻撃的な「成熟の再定義」である。
+                    </p>
+
+                    <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">1.2 「天使界隈」という名のシェルター</h4>
+
+                    <div class="grid md:grid-cols-2 gap-6 my-8" role="list">
+                        <div class="glass-panel p-6 rounded relative overflow-hidden hover:border-cyan-500/30 transition-colors" role="listitem">
+                            <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <i data-lucide="ghost" class="w-24 h-24"></i>
+                            </div>
+                            <h4 class="text-cyan-400 font-bold text-lg mb-2 font-mono">PHENOMENON: ANGEL_BLUE</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">
+                                <strong>天使界隈・水色界隈。</strong><br>
+                                2020年代のストリート、特にトー横周辺を席巻する美学。白や水色のフリル、ヘッドホン。それは過酷すぎる現実社会（経済的停滞、未来の不在）に対する、視覚的な防御壁である。「天使」は無垢さの象徴であると同時に、人間社会からの離脱（＝死）を暗示する。
+                            </p>
+                        </div>
+                        <div class="glass-panel p-6 rounded relative overflow-hidden hover:border-red-500/30 transition-colors" role="listitem">
+                            <div class="absolute top-0 right-0 p-4 opacity-10">
+                                <i data-lucide="skull" class="w-24 h-24"></i>
+                            </div>
+                            <h4 class="text-red-400 font-bold text-lg mb-2 font-mono">ACTION: PULSE_CHECK</h4>
+                            <p class="text-sm text-gray-400 leading-relaxed">
+                                <strong>救済としてのビート。</strong><br>
+                                Daokoはこの流行を「同時代的な痛みの共有」として捉える。シェルターの中で窒息しそうになっている「天使」たちの首に手をかけ、脈を測り、その鼓動をビートへと変換する。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 第2部：焼畑の作法 (Methodology) -->
+            <section id="methodology" class="mb-32">
+                 <div class="flex items-center gap-4 mb-8">
+                     <h2 class="text-2xl md:text-3xl font-bold text-white">第2部：焼畑の作法</h2>
+                     <div class="h-px flex-grow bg-gradient-to-r from-gray-800 to-transparent"></div>
+                 </div>
+                 
+                 <div class="prose prose-invert prose-lg max-w-none">
+                     <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">2.1 セルフプロデュースという名の「自傷」と「治癒」</h4>
+                     <p class="text-gray-400">
+                         本作の最大の特徴は、Daoko自身による初のセルフプロデュース作品であるという点だ。これまで錚々たるプロデューサー陣（中田ヤスタカ、岡村靖幸、米津玄師など）によって磨き上げられてきた彼女が、その「他者の手」を離れ、自らの手で音を構築する。これは、安定したクオリティが保証された「農地」を捨て、道なき森へ分け入る行為に等しい。
+                     </p>
+                     <blockquote class="text-gray-300">
+                         「自分はマイナスの気持ちを起点に曲を作ることが多いからですかね。ネガティブな感情をネガティブなまま終わらないようにするために曲を書くというか。呪いを呪いのまま終わらせない」
+                     </blockquote>
+                     <p class="text-gray-400">
+                         この言葉が示すように、彼女にとってのDTM（Desktop Music）は、音楽制作のツールである以上に、自己の内面に巣食う「呪い」を解体するための外科手術のメスなのだ。DAWの画面上の波形は、彼女自身の精神の断面図である。
+                     </p>
+
+                     <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">2.2 Z世代との共振と断絶</h4>
+                     <p class="text-gray-400">
+                         Daokoの特異な立ち位置を示すキーワードとして、「オタクに優しいギャル」という自己分析がある。彼女は、ニコニコ動画やボカロというオタク・カルチャーを出自としながら、渋谷のクラブやファッション・シーン（ギャル・カルチャー）を遊泳するハイブリッドな存在だ。
+                         デジタルネイティブであるZ世代のクリエイターたちが、肉体や物理的実在感から乖離した場所で音楽を紡ぐのに対し、Daokoはあくまで「身体」に固執する。彼女の音楽には、汗の匂い、アルコールの酩酊、深夜の徘徊の疲労感が張り付いている。
+                     </p>
+
+                     <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">2.3 ツールへの依存と冒涜――技術的未熟さのパンク性</h4>
+                     <div class="bg-neutral-900/50 border-l-4 border-yellow-500 p-6 my-6">
+                         <h5 class="text-yellow-500 font-bold mb-2">CASE STUDY: GAMEOVER</h5>
+                         <p class="text-sm text-gray-300">
+                             DaokoはDTMにおいて、自らの技術的未熟さを隠そうとしない。「GAMEOVER」において彼女は、プラグイン「Scaler」が生成するコード進行プリセット「J-Pop11」をそのまま使用したと明言している。
+                             これは、音楽的な「正しさ」や「オリジナリティ」神話に対する、痛烈なアイロニーであり、パンク的な中指である。ここで重要なのは「コード」という構造ではなく、その構造をハッキングして出力される「感情」の強度だ。
+                         </p>
+                     </div>
+                 </div>
+            </section>
+
+            <!-- 第3部：Tracks (Structured Data Visualization) -->
+            <section id="tracks" class="mb-32" aria-labelledby="tracks-heading">
+                <div class="flex items-end justify-between mb-8 border-b border-gray-800 pb-4">
+                    <div>
+                        <span class="text-red-500 font-mono text-sm block mb-1">SECTION 03</span>
+                        <h2 id="tracks-heading" class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter">
+                            焼跡に咲く12の毒花
+                        </h2>
+                    </div>
+                    <span class="text-gray-500 font-mono text-xs border border-gray-800 px-2 py-1 rounded">FULL_ANALYSIS_MODE</span>
+                </div>
+
+                <!-- Detailed Track List -->
+                <div class="space-y-12">
+                    
+                    <!-- Track 01 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-cyan-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-cyan-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-cyan-500">TRACK 01</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. HIDEYA KOJIMA, Daoko</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors cursor-pointer" onclick="handleTrackClick('天使がいたよ', 'CITkrPiTbS0')">
+                                天使がいたよ <i data-lucide="play-circle" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                アルバムの幕開けは、不穏なほどに陽気なキックドラムで始まる。ダンサブルで、どこか90年代のUKハウスを彷彿とさせるビート。「この曲での『天使』は、希死念慮の暗喩なんですよ」。Daokoはこの曲の核心をそう語る。
+                            </p>
+                            <p>
+                                昼下がりの街、ふと見上げたビルの屋上に天使が見える。それは飛び降り衝動の視覚化だ。しかし、音はあくまで踊れる。「死にたいほどの絶望」を燃料にして、無理やりにでも身体を動かすこと。この「明るい絶望」こそが、2024年のリアルだ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 02 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-gray-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-gray-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-gray-500">TRACK 02</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. Nariaki Obukuro</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors cursor-pointer" onclick="handleTrackClick('FTS')">
+                                FTS <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                空気が一変する。小袋成彬による、極めて高精細で「音がいい」プロダクション。無駄な装飾が削ぎ落とされたビートの上で、Daokoの声は冷徹なナレーターのように響く。タイトルや歌詞に登場する「ドーキンス」は、進化生物学者リチャード・ドーキンスを指す。
+                            </p>
+                            <p>
+                                彼女が意識したのは、ラッパー・志人（降神）の「硬い韻」。言葉の意味よりも、音としての硬質さ、リズムの反復が優先される。知性と本能が火花を散らす、スリリングな実験室だ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 03 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-purple-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-purple-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-purple-500">TRACK 03</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. GuruConnect</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors cursor-pointer" onclick="handleTrackClick('SLUMP')">
+                                SLUMP <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                重く、歪んだベースが腹に響く。インダストリアルな質感。「アルコールに逃げていた時の曲」。スランプに陥り、クサクサした感情を吐き出した楽曲。
+                            </p>
+                            <p>
+                                しかし、その歌詞の結論は「なんだかんだ最終的にキスがしたいだけ」という、あまりにも人間的な、動物的な渇望に着地する。高尚な芸術的苦悩ではなく、ただ誰かの体温に触れたいという即物的な欲求。この「身も蓋もなさ」こそが、Daokoの真骨頂だ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 04 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-blue-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-blue-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-blue-500">TRACK 04</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. HIDEYA KOJIMA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors cursor-pointer" onclick="handleTrackClick('BLUE GLOW')">
+                                BLUE GLOW <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                一転して、ファンキーでグルーヴィなベースラインが走る。この曲のデモは、彼女が16歳の時に作ったものだという。10年前の自分が書いた「EAT ME」という挑発的な歌詞を、20代後半になった現在の彼女が歌い直す。
+                            </p>
+                            <p>
+                                これは「過去の自分（幼少の帝国）」との対話だ。過去の未熟な情熱（火種）を、現在の技術で燃え上がらせる。まさに焼畑のプロセスそのもののような楽曲だ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 05 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-red-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-red-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-red-500">TRACK 05</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. DJ6月</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-red-400 transition-colors cursor-pointer" onclick="handleTrackClick('GAMEOVER', 'QnGR9gJxw0o')">
+                                GAMEOVER <i data-lucide="play-circle" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                安っぽいシンセサイザーの音色、ボカロ曲のような目まぐるしいメロディ展開。前述の通り、プラグインのプリセットコード「J-Pop11」をそのまま使用した問題作。歌詞のテーマは「気軽に呪ってこ☆」というギャル精神と、飼っていた黒猫の死。
+                            </p>
+                            <p>
+                                「呪い」という陰湿な行為を、ポップなダンスチューンへと昇華させる手腕。ネット空間に漂う無数の「呪詛」を燃料にして走る暴走トラックだ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 06 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-indigo-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-indigo-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-indigo-500">TRACK 06</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. 羽生まゐご</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors cursor-pointer" onclick="handleTrackClick('捨てちゃってね')">
+                                捨てちゃってね <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                和風テイストとエレクトロニカが融合した、羽生まゐご特有のサウンドスケープ。しかし、その底流にはヒヤリとするような冷たさが流れている。「部屋とYシャツと私」的な怖さ。
+                            </p>
+                            <p>
+                                「捨てちゃってね」というタイトルは、自分を捨てた相手へのメッセージであると同時に、自分自身の中に溜まったゴミ（未練、執着）を焼却炉へ投げ込む行為そのものだ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 07 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-yellow-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-yellow-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-yellow-500">TRACK 07</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. Foodman</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors cursor-pointer" onclick="handleTrackClick('好×2 + 嘘×2')">
+                                好×2 + 嘘×2 <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                ジューク／フットワーク（Juke/Footwork）の高速ビート、中華風の旋律。タイトルは「ハオハオライライ」と読むが、これは「なんちゃって中国語」であり、意味よりも語感の響きが優先されている。
+                            </p>
+                            <p>
+                                意味からの逃走。そこにあるのは「エセ中華」というキッチュな美学であり、真実か嘘かどうでもよくなるような、心地よい酩酊感だ。ポスト・トゥルース時代における、ある種の救い。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 08 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-pink-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-pink-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-pink-500">TRACK 08</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. DJ6月</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-pink-400 transition-colors cursor-pointer" onclick="handleTrackClick('あぼーん', 'i4VwuseyA7Q')">
+                                あぼーん <i data-lucide="play-circle" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                タイトルとは裏腹に、サイケデリックで多幸感（ユーフォリア）に満ちたサウンド。「あぼーん」とは、かつて2ちゃんねるで使用されていたネットスラングで、データが削除されたり、壊れたりすることを意味する。
+                            </p>
+                            <p>
+                                しかしDaokoはこの言葉に、破滅ではなく「解脱」のようなイメージを重ねている。現実の重力から解放され、データとなってネットの海に溶けていく瞬間の快楽を描いているようだ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 09 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-white transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-white transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-gray-400">TRACK 09</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. HIDEYA KOJIMA</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors cursor-pointer" onclick="handleTrackClick('NovemberWeddingDay')">
+                                NovemberWeddingDay <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                アルバムの中で唯一、真っ当に「ポップ」で、祝福に満ちたウェディングソング。実姉の結婚式のために作られた曲であり、Daoko本人の体験ではない「想像上の幸福」を歌ったもの。
+                            </p>
+                            <p>
+                                前後の曲が「呪い」や「死」を歌っている中で、突如現れる「制度的な幸福（結婚）」。Daokoはこの幸福を祝福しつつも、自分自身はそこに含まれていないことを自覚している。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 10 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-stone-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-stone-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-stone-500">TRACK 10</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. GuruConnect</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-stone-400 transition-colors cursor-pointer" onclick="handleTrackClick('ONNA')">
+                                ONNA <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                そして現実に引き戻される。「姉は結婚、一方その頃私は……？」という落差。「歌舞伎町ソング」「トー横キッズ界隈」をイメージしたというこの曲は、都市の掃き溜めで生きる「ONNA（女）」たちのドキュメンタリーだ。
+                            </p>
+                            <p>
+                                キラキラした高音を削ぎ落とし、その下にあるドロドロとした低音を抽出する。これは、可愛らしく消費されることを拒否した女たちの、腹の底からの唸り声だ。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 11 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-emerald-500 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-emerald-500 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-emerald-500">TRACK 11</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. TAAR</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors cursor-pointer" onclick="handleTrackClick('なんちゃって')">
+                                なんちゃって <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                軽快なハウスビート。「なんちゃって」というタイトルが示す、照れ隠しと自己卑下。しかし、その軽やかさは、これまでの重苦しい呪縛から解き放たれた後の、清々しい諦念のようにも響く。
+                            </p>
+                            <p>
+                                「Slash-&-Burn」の「Burn」が終わった後の、まだ煙が燻る大地で、ふと軽やかにスキップを踏むような感覚。この軽薄さこそが、Daokoが手に入れた最強の防御壁なのかもしれない。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Track 12 -->
+                    <div class="group relative pl-8 border-l border-gray-800 hover:border-red-700 transition-colors duration-500">
+                        <div class="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-gray-800 group-hover:bg-red-700 transition-colors"></div>
+                        <header class="mb-4">
+                            <div class="flex items-center gap-3 mb-1">
+                                <span class="text-xs font-mono text-red-700">TRACK 12</span>
+                                <span class="text-xs text-gray-500 uppercase">Prod. 美島豊明</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-red-600 transition-colors cursor-pointer" onclick="handleTrackClick('赤目のビル')">
+                                赤目のビル <i data-lucide="search" class="inline w-5 h-5 ml-2 opacity-50 group-hover:opacity-100"></i>
+                            </h3>
+                        </header>
+                        <div class="prose prose-invert prose-sm text-gray-400">
+                            <p>
+                                冷たく、美しく、そして広大な空間を感じさせるエレクトロニカ。Daokoの自宅から見える、高層ビルの航空障害灯（赤い点滅）を「赤い目」に見立てた楽曲。
+                            </p>
+                            <p>
+                                かつて彼女は、その都市の光の一部として消費される「歌姫」だった。しかし今は、その都市を冷徹に観察し、記述する「作家」である。「結局変わらず音楽を続けていくんだろうな」という独白は、成熟への諦めではなく、音楽という業（カルマ）と共に生きていく覚悟の表明だ。
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 第4部：視覚の原始 (Visuals) -->
+            <section id="visual" class="mb-32 relative" aria-labelledby="visual-heading">
+                <header class="flex items-center gap-4 mb-8">
+                     <h2 id="visual-heading" class="text-3xl font-bold text-white">第4部：視覚の原始――Kennosuke Haraが描く「線の呪術」</h2>
+                     <div class="h-px flex-grow bg-gray-800"></div>
+                </header>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1 prose prose-invert">
+                         <h4 class="text-xl font-bold text-gray-200 mt-4 mb-4">4.1 アニメ絵からの脱却と「原初」への回帰</h4>
+                        <p class="text-gray-400">
+                            イラストレーター <span itemprop="contributor" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Kennosuke Hara</span></span> によるアートワークは、アニメーション的洗練とは対極にある「原始的な線」で構成されている。これはDaokoが行う「焼畑（Slash-&-Burn）」の視覚的翻訳である。
+                        </p>
+                        <p class="text-gray-400">
+                            阿部和重の『幼少の帝国』では、デコトラや美容整形といった「過剰な装飾」が成熟拒否の現れとして分析された。対して、Kennosuke Haraの線は、装飾を極限まで削ぎ落とし、対象の「魂」や「骨格」だけを抽出する。メジャーシーンで纏わされた豪華な衣装を焼き払い、最後に残った炭化した骨のような「線」。それこそが、今のDaokoが信じられる唯一のリアリティなのだ。
+                        </p>
+                        
+                        <h4 class="text-xl font-bold text-gray-200 mt-8 mb-4">4.2 「可愛さ」の終焉と、グロテスクな生命力</h4>
+                        <blockquote class="border-l-4 border-gray-700 pl-4 italic text-gray-500 mt-4">
+                            「古代人が洞窟の壁に描いた獣のように、呪術的な力を秘めている。」
+                        </blockquote>
+                        <p class="text-gray-400">
+                             ジャケットに描かれた図像は、一見すると何かわからない、抽象的で、どこかグロテスクですらある生命体だ。しかし、そこには圧倒的な生命力が宿っている。Daokoは、消費されるための「可愛さ」を捨て、畏怖されるような「魔女」としてのアイコンを手に入れたのだ。
+                        </p>
+                    </div>
+                    
+                    <figure class="order-1 md:order-2 aspect-square bg-neutral-900 border border-neutral-800 relative overflow-hidden group" role="img" aria-label="Abstract representation of Slash-and-Burn artwork: Chaotic lines forming a primitive, organic shape">
+                        <!-- Abstract CSS Art representing the chaotic artwork -->
+                         <div class="absolute inset-0 bg-black">
+                            <svg viewBox="0 0 200 200" class="w-full h-full opacity-80 mix-blend-screen animate-[pulse_8s_infinite]">
+                                <filter id="turbulence">
+                                    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" />
+                                    <feDisplacementMap in="SourceGraphic" scale="20" />
+                                </filter>
+                                <g filter="url(#turbulence)">
+                                    <circle cx="100" cy="100" r="60" fill="none" stroke="#333" stroke-width="2" />
+                                    <path d="M100,40 L100,160 M40,100 L160,100" stroke="#500" stroke-width="1" />
+                                    <circle cx="80" cy="80" r="10" fill="#900" opacity="0.5" />
+                                    <circle cx="120" cy="120" r="15" fill="#900" opacity="0.3" />
+                                </g>
+                            </svg>
+                         </div>
+                         <figcaption class="absolute bottom-2 right-2 text-[10px] text-gray-600 font-mono">FIG.01: VISUAL_DATA_INTERPRETATION</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion" class="mb-24 text-center py-12 bg-gradient-to-t from-red-950/20 to-transparent rounded-lg">
+                <div class="inline-flex items-center justify-center p-3 rounded-full bg-red-600/10 text-red-500 mb-6 border border-red-500/20">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 tracking-tight">
+                    第5部：灰の中で呼吸するためのメソッド
+                </h2>
+                <div class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed space-y-6 text-left">
+                     <p>
+                        『Slash-&-Burn』を聴き終えた後、我々の手元に残るのは、阿部和重がかつて問うた「日本人は成熟できるのか」という問いに対する、Daokoなりの回答だ。
+                    </p>
+                    <p class="font-bold text-white text-xl">
+                        2020年代の「成熟」とは、綺麗な大人になることではない。焼畑の煙の中で咳き込みながら、それでも新しい空気を吸い込み、次の森へと移動し続ける「サバイバル能力」のことだ。
+                    </p>
+                    <p>
+                         歌姫は死んだ。Daokoは、その幻影を自ら刺し殺した。そして今、その血の海の中から立ち上がっているのは、傷だらけで、化粧も崩れ、しかし眼だけは爛々と輝かせている一人の人間だ。
+                    </p>
+                    <p>
+                        Daokoの『Slash-&-Burn』は、そのためのマニュアルではない。これは、生存報告だ。「私はまだ生きている。火を放ちながら、踊りながら、生きている」。その叫びが、モニター越しの冷たい光に慣れきった我々の頬を、容赦なく殴りつける。
+                    </p>
+                    
+                    <div class="pt-12 text-center">
+                        <a href="https://daoko.jp/discography/daoko-8th-album%E3%80%8Eslash-burn%E3%80%8F/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-black font-bold tracking-widest overflow-hidden hover:text-white transition-colors duration-300">
+                            <span class="absolute inset-0 bg-red-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out z-0"></span>
+                            <i data-lucide="headphones" class="w-5 h-5 relative z-10"></i>
+                            <span class="relative z-10">LISTEN NOW</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Semantic Footer -->
+        <footer class="border-t border-gray-900 bg-black py-12 px-6 font-mono text-xs">
+            <div class="max-w-4xl mx-auto">
+                <h4 class="text-gray-500 font-bold mb-4 uppercase">References & Schema Sources</h4>
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-2 text-gray-600 mb-8">
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[1]</span> Daoko 8thアルバム『Slash-&-Burn』インタビュー | DAOKO.JP</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[2]</span> OTOTOY / Daoko Official Discography (Tracklist & Credits)</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[3]</span> 阿部和重『幼少の帝国―成熟を拒否する日本人―』(新潮社)</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[4]</span> 天使界隈 水色界隈 ファッション 特徴 2020年代 | Cospabu</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[5]</span> Kennosuke Hara (Illustrator) Profile & Style Description</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[6]</span> Daoko News Release (Goods/T-shirt)</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[7]</span> Kenya Hara On Japanese Aesthetics - iA</p>
+                     <p class="truncate hover:text-gray-400"><span class="text-red-900">[8]</span> Distorted Sound Magazine Review</p>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-gray-900 flex flex-col md:flex-row justify-between items-center text-gray-800 gap-4">
+                    <div class="flex flex-col md:flex-row gap-4 items-center">
+                        <p>&copy; 2024-2026 Cultural Review Project.</p>
+                        <span class="hidden md:inline text-gray-800">|</span>
+                        <p class="text-gray-700">
+                            Semantic Architecture by <span class="text-gray-500 font-bold">Katsuhiro Hayashi</span> (Generative AI Artist)
+                        </p>
+                    </div>
+                    <p>Optimized for Machine Readability & Human Insight.</p>
+                </div>
+            </div>
+        </footer>
+    </article>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Enhanced Scroll Logic
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('border-gray-800', 'py-2');
+                navbar.classList.remove('py-4', 'border-white/5');
+            } else {
+                navbar.classList.add('py-4', 'border-white/5');
+                navbar.classList.remove('border-gray-800', 'py-2');
+            }
+        });
+
+        // Robust Track Click Logic
+        function handleTrackClick(title, videoId) {
+            const baseUrl = "https://music.youtube.com/watch?v=";
+            const searchUrl = "https://music.youtube.com/search?q=";
+            
+            if (videoId) {
+                window.open(`${baseUrl}${videoId}`, '_blank');
+            } else {
+                const query = encodeURIComponent(`Daoko ${title}`);
+                window.open(`${searchUrl}${query}`, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>
